@@ -1,15 +1,33 @@
 <!doctype html>
-<html lang="en">  
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Máster en CSS -  WEB</title>
+    <title>Proyecto con Tailwind CSS</title>
     <link rel="icon" type="favicon/x-icon" href="img/supertux.png" />
     <link href="/src/style.css" rel="stylesheet" />
   </head>
 
   <body class="bg-[url(/img/pattern.png)] bg-scroll">
-
+    <!--Inicio de Cabecera-->
+    <header id="header" class="bg-black bebas font-sans h-20 text-white">
+      <div class="container w-11/12 mx-auto flex">
+        <div id="logo" class="flex-1">
+          <div
+            class="bg-azul-claro cursor-pointer duration-300 hover:text-black mt-4 pb-0.5 pt-0.5 overflow-hidden rounded-sm text-center tracking-wider transition w-64"
+          >
+            <span class="block float-left mt-1 ml-11 text-3xl symbol">S</span>
+            <!-- https://www.fontsquirrel.com/fonts/web-symbols -->
+            <h3
+              class="block float-right mt-1.5 mr-16 text-4xl transition duration-100"
+            >
+              TAILWIND
+            </h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Fin de Cabecera-->
   </body>
 </html>
