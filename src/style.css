@@ -39,3 +39,14 @@
 .trebuchet {
   font-family: "TrebuchetMS";
 }
+
+
+/* THEME */
+@theme {
+  /* Configuración de los colores. Tailwind v4 genera automáticamente todas las utilidades asociadas: bg-azul-claro, text-azul-claro, border-azul-claro, etc. */
+  --color-azul-claro: #37bcf9;
+  --color-azul-oscuro: #0370b9;
+
+  /* Configuración de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-body-pattern  */
+  --background-image-body-pattern: url('../img/pattern.png');
+}
