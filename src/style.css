@@ -123,3 +123,21 @@
     @apply block transition duration-200 hover:text-azul-claro transform hover:scale-125;
   }
 }
+
+@utility card {
+  @apply flex-1 h-80 border-2 border-gray-200 shadow-md bg-white overflow-hidden m-5 mt-10 pl-5 pr-5 cursor-pointer duration-300;
+}
+
+@utility card-icon {
+  font-family: "WebSymbolsRegular";
+  @apply block w-full h-32 text-5xl text-center mt-12 m-auto transition duration-300;
+}
+
+@utility card-category {
+  @apply w-full h-12 font-bold text-xl text-center text-azul-oscuro transition duration-300;
+}
+
+@utility card-description {
+  font-family: "TrebuchetMS";
+  @apply text-base text-center text-azul-oscuro transition duration-300;
+}
