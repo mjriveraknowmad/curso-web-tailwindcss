@@ -67,6 +67,10 @@
   --animate-show-card-category: showCardCategory 400ms linear;
   --animate-show-card-description: showCardDescription 400ms linear;
 
+  /* Sombras personalizadas*/
+  --shadow-header3D: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+  --shadow-box: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 1px rgba(0, 0, 0, 0.3) inset;
+
   /* 2. Definimos los keyframes usando la sintaxis estándar de CSS */
   @keyframes fromBellow {
     0% {
@@ -166,11 +170,39 @@
 
 @utility card-category {
   @apply group-hover:text-white group-hover:animate-show-card-category font-bold text-xl text-center text-azul-oscuro transition duration-300
-    block text-xs md:text-base lg:text-lg  h-6 lg:h-12;
+    block text-xs md:text-base lg:text-lg h-6 lg:h-12;
 }
 
 @utility card-description {
   font-family: "TrebuchetMS";
-  @apply group-hover:text-white group-hover:animate-show-card-description   text-base text-center text-azul-oscuro transition duration-300
+  @apply group-hover:text-white group-hover:animate-show-card-description text-base text-center text-azul-oscuro transition duration-300
     hidden lg:block lg:text-lg lg:mt-1.5;
+}
+
+@utility articles-header {
+  font-family: "BebasNeue";
+  background: url("/img/pxgray.png"), white;
+  @apply block w-full h-20 text-center text-2xl lg:text-4xl font-medium tracking-widest pt-4 lg:pt-5 border shadow-header3D ;
+}
+
+@utility article-item {
+  @apply w-full h-auto border border-gray-200 m-10 mx-auto p-2.5 bg-white text-black shadow-md;
+}
+
+@utility article-data {
+  @apply lg:float-right bg-gray-800 text-white leading-6 p-2 -mt-2.5 -mr-2.5 text-sm rounded-bl-lg;
+  span {
+    @apply m-2.5;
+  }
+}
+
+@utility article-head {
+  @apply block text-2xl m-1;
+  a {
+    @apply font-semibold text-azul-oscuro hover:underline;
+  }
+}
+
+@utility article-description {
+  @apply block mt-3 mb-3 text-base font-sans font-normal;
 }
