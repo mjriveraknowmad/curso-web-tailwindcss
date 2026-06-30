@@ -46,6 +46,9 @@
   --color-azul-claro: #37bcf9;
   --color-azul-oscuro: #0370b9;
 
+  /* Configuración de los breakpoints. */
+   --breakpoint-xs: 20rem;
+
   /* Configuración de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-body-pattern  */
   --background-image-body-pattern: url("../img/pattern.png");
 
@@ -76,7 +79,7 @@
 
 /* COMPONENTS */
 @utility menu-item {
-  @apply flex-none ml-5 mr-5 tracking-wider;
+  @apply flex-none xs:flex-1 ml-5 mr-5 tracking-wider;
   a {
     @apply block transition duration-200 hover:text-azul-claro transform hover:scale-125;
   }
