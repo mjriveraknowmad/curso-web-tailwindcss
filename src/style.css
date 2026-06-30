@@ -155,19 +155,22 @@
 }
 
 @utility card {
-  @apply flex-1 h-80 border-2 border-gray-200 shadow-md bg-white overflow-hidden m-5 mt-10 pl-5 pr-5 cursor-pointer duration-300 hover:bg-black;
+  @apply flex-1 border-2 border-gray-200 shadow-md bg-white overflow-hidden pl-5 pr-5 cursor-pointer duration-300 hover:bg-black
+  h-40 lg:h-80 m-2 lg:m-5 mt-10;
 }
 
 @utility card-icon {
   font-family: "WebSymbolsRegular";
-  @apply group-hover:text-7xl group-hover:animate-show-card-icon group-hover:text-azul-claro block w-full h-32 text-5xl text-center mt-12 m-auto pt-5 transition duration-300;
+  @apply group-hover:text-4xl lg:group-hover:text-7xl group-hover:animate-show-card-icon group-hover:text-azul-claro block w-full h-20 lg:h-32 text-3xl lg:text-5xl text-center mt-3 lg:mt-5 lg:mt-12 m-auto pt-5 transition duration-300;
 }
 
 @utility card-category {
-  @apply group-hover:text-white group-hover:animate-show-card-category h-12 font-bold text-xl text-center text-azul-oscuro transition duration-300;
+  @apply group-hover:text-white group-hover:animate-show-card-category font-bold text-xl text-center text-azul-oscuro transition duration-300
+    block text-xs md:text-base lg:text-lg  h-6 lg:h-12;
 }
 
 @utility card-description {
   font-family: "TrebuchetMS";
-  @apply group-hover:text-white group-hover:animate-show-card-description   text-base text-center text-azul-oscuro transition duration-300;
+  @apply group-hover:text-white group-hover:animate-show-card-description   text-base text-center text-azul-oscuro transition duration-300
+    hidden lg:block lg:text-lg lg:mt-1.5;
 }
