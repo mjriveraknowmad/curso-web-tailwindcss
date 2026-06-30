@@ -45,17 +45,24 @@
   /* Configuración de los colores. Tailwind v4 genera automáticamente todas las utilidades asociadas: bg-azul-claro, text-azul-claro, border-azul-claro, etc. */
   --color-azul-claro: #37bcf9;
   --color-azul-oscuro: #0370b9;
+  --text-shadow-banner: 2px 2px 1px black;
 
   /* Configuración de los breakpoints. */
    --breakpoint-xs: 20rem;
 
-  /* Configuración de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-body-pattern  */
+  /* Configuración de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-body-pattern y bg-banner */
   --background-image-body-pattern: url("../img/pattern.png");
+  --background-image-banner: url("../img/bakbaner.png");
+  
+  /** Configuración de la posición de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-banner-position */
+  --background-position-banner: "-200px -200px";
 
-  /* Configuración de animaciones. Tailwind v4 creará automáticamente la clase de utilidad animate-spin-low */
+  /* Configuración de animaciones. Tailwind v4 creará automáticamente la clase de utilidad animate-spin-low, animate-bg-banner ... */
   --animate-spin-low: spin 2s linear infinite;
   --animate-from-bellow: fromBellow 500ms linear;
   --animate-from-right: fromRight 300ms linear;
+  --animate-bg-banner: backBanner 10s linear;
+  --animate-show-banner-text: showBannerText 10s linear;
 
   /* 2. Definimos los keyframes usando la sintaxis estándar de CSS */
   @keyframes fromBellow {
@@ -73,6 +80,38 @@
     }
     100% {
       transform: translateX(0%);
+    }
+  }
+
+  @keyframes backBanner {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200px -200px;
+    }
+  }
+
+  @keyframes showBannerText {
+    0% {
+      transform: translateX(-600%) scale(5,5);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(600%) scale(5,5);
+      opacity: 1;
+    }
+    75% {
+      transform: translateX(-600%) scale(5,5);
+      text-shadow: none;
+      color: transparent;
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%) scale(1,1);
+      text-shadow: 2px 2px 1px black;
+      color: white;
+      opacity: 1;
     }
   }
 }
