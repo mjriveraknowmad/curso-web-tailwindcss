@@ -64,6 +64,7 @@
   --animate-bg-banner: backBanner 10s linear;
   --animate-show-banner-text: showBannerText 10s linear;
   --animate-show-card-icon: showCardIcon 300ms linear;
+  --animate-show-card-category: showCardCategory 400ms linear;
 
   /* 2. Definimos los keyframes usando la sintaxis estándar de CSS */
   @keyframes fromBellow {
@@ -124,6 +125,15 @@
       transform: translateY(0%);
     }
   }
+
+  @keyframes showCardCategory {
+    0% {
+      transform: translateY(-200%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
 }
 
 /* COMPONENTS */
@@ -144,7 +154,7 @@
 }
 
 @utility card-category {
-  @apply group-hover:text-white h-12 font-bold text-xl text-center text-azul-oscuro transition duration-300;
+  @apply group-hover:text-white group-hover:animate-show-card-category h-12 font-bold text-xl text-center text-azul-oscuro transition duration-300;
 }
 
 @utility card-description {
