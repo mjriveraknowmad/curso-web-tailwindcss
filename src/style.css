@@ -63,6 +63,7 @@
   --animate-from-right: fromRight 300ms linear;
   --animate-bg-banner: backBanner 10s linear;
   --animate-show-banner-text: showBannerText 10s linear;
+  --animate-show-card-icon: showCardIcon 300ms linear;
 
   /* 2. Definimos los keyframes usando la sintaxis estándar de CSS */
   @keyframes fromBellow {
@@ -114,6 +115,15 @@
       opacity: 1;
     }
   }
+
+  @keyframes showCardIcon {
+    0% {
+      transform: translateY(-200%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
 }
 
 /* COMPONENTS */
@@ -125,19 +135,19 @@
 }
 
 @utility card {
-  @apply flex-1 h-80 border-2 border-gray-200 shadow-md bg-white overflow-hidden m-5 mt-10 pl-5 pr-5 cursor-pointer duration-300;
+  @apply flex-1 h-80 border-2 border-gray-200 shadow-md bg-white overflow-hidden m-5 mt-10 pl-5 pr-5 cursor-pointer duration-300 hover:bg-black;
 }
 
 @utility card-icon {
   font-family: "WebSymbolsRegular";
-  @apply block w-full h-32 text-5xl text-center mt-12 m-auto transition duration-300;
+  @apply group-hover:text-7xl group-hover:animate-show-card-icon group-hover:text-azul-claro block w-full h-32 text-5xl text-center mt-12 m-auto pt-5 transition duration-300;
 }
 
 @utility card-category {
-  @apply w-full h-12 font-bold text-xl text-center text-azul-oscuro transition duration-300;
+  @apply group-hover:text-white h-12 font-bold text-xl text-center text-azul-oscuro transition duration-300;
 }
 
 @utility card-description {
   font-family: "TrebuchetMS";
-  @apply text-base text-center text-azul-oscuro transition duration-300;
+  @apply group-hover:text-white text-base text-center text-azul-oscuro transition duration-300;
 }
