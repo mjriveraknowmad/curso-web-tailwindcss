@@ -331,3 +331,66 @@
             group-hover:translate-x-1;
   }
 
+@utility footer-box {
+  font-family: "TrebuchetMS";
+  @apply flex-1
+            w-80
+            h-96
+            m-10
+            text-center
+            text-white
+            xs:w-11/12
+            xs:mx-auto
+            xs:mt-3
+            md:w-11/12
+            md:mx-auto
+            md:mt-3
+            lg:w-80
+            lg:m-10;
+}
+
+@utility footer-header {
+  background: url("../img/pxgray.png"), white;
+  font-family: "BebasNeue";
+  @apply tracking-wide 
+            text-center
+            text-4xl
+            text-black
+            rounded-md
+            p-1.5
+            pt-2
+            mb-4;
+}
+
+@utility footer-menu {
+  @apply text-left 
+            m-5 
+            text-2xl;
+  li {
+    @apply mt-3
+          p-1
+          border-b-2
+          border-gray-400
+          transition
+          duration-300;
+
+    a {
+      @apply block
+              h-10
+              transition
+              duration-300
+              text-azul-claro
+              hover:text-white;
+    }
+  }
+}
+
+@utility browsers {
+  a {
+    @apply flex-1
+            mb-1.5;
+    img {
+      @apply w-11;
+    }
+  }
+}
