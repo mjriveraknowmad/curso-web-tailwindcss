@@ -48,12 +48,12 @@
   --text-shadow-banner: 2px 2px 1px black;
 
   /* Configuración de los breakpoints. */
-   --breakpoint-xs: 20rem;
+  --breakpoint-xs: 20rem;
 
   /* Configuración de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-body-pattern y bg-banner */
   --background-image-body-pattern: url("../img/pattern.png");
   --background-image-banner: url("../img/bakbaner.png");
-  
+
   /** Configuración de la posición de la imagen de fondo. Tailwind creará automáticamente la clase utilidad bg-banner-position */
   --background-position-banner: "-200px -200px";
 
@@ -68,8 +68,12 @@
   --animate-show-card-description: showCardDescription 400ms linear;
 
   /* Sombras personalizadas*/
-  --shadow-header3D: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
-  --shadow-box: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 1px rgba(0, 0, 0, 0.3) inset;
+  --shadow-header3D:
+    0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f,
+    3px 4px 0px #393d3f;
+  --shadow-box:
+    0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3),
+    0px 1px white inset, 0px -3px 1px rgba(0, 0, 0, 0.3) inset;
 
   /* 2. Definimos los keyframes usando la sintaxis estándar de CSS */
   @keyframes fromBellow {
@@ -101,21 +105,21 @@
 
   @keyframes showBannerText {
     0% {
-      transform: translateX(-600%) scale(5,5);
+      transform: translateX(-600%) scale(5, 5);
       opacity: 1;
     }
     50% {
-      transform: translateX(600%) scale(5,5);
+      transform: translateX(600%) scale(5, 5);
       opacity: 1;
     }
     75% {
-      transform: translateX(-600%) scale(5,5);
+      transform: translateX(-600%) scale(5, 5);
       text-shadow: none;
       color: transparent;
       opacity: 0;
     }
     100% {
-      transform: translateX(0%) scale(1,1);
+      transform: translateX(0%) scale(1, 1);
       text-shadow: 2px 2px 1px black;
       color: white;
       opacity: 1;
@@ -182,7 +186,7 @@
 @utility articles-header {
   font-family: "BebasNeue";
   background: url("/img/pxgray.png"), white;
-  @apply block w-full h-20 text-center text-2xl lg:text-4xl font-medium tracking-widest pt-4 lg:pt-5 border shadow-header3D ;
+  @apply block w-full h-20 text-center text-2xl lg:text-4xl font-medium tracking-widest pt-4 lg:pt-5 border shadow-header3D;
 }
 
 @utility article-item {
@@ -209,9 +213,9 @@
 
 /* ASIDE */
 @utility aside-header {
-    font-family: "BebasNeue";
-    background: url("../img/pxgray.png"), white;
-    @apply block
+  font-family: "BebasNeue";
+  background: url("../img/pxgray.png"), white;
+  @apply block
             h-11
             leading-10
             text-3xl
@@ -222,10 +226,10 @@
             mb-3.5
             border
             shadow-header3D;
-  }
+}
 
 @utility aside-box {
-    @apply w-10/12
+  @apply w-10/12
             h-60
             mt-5
             mb-7
@@ -234,19 +238,18 @@
             bg-white 
             shadow-box
             xs:w-60;
-  }
+}
 
- 
 @utility login-icon {
-    @apply text-center 
+  @apply text-center 
             absolute 
             ml-7 
             mt-1 
             h-8;
-  }
+}
 
 @utility login-input {
-    @apply block 
+  @apply block 
             mx-auto 
             mt-5 
             w-10/12 
@@ -261,10 +264,10 @@
             outline-none 
             focus:outline-none 
           focus:text-gray-600;
-  }
+}
 
 @utility login-button {
-    @apply w-24 
+  @apply w-24 
             h-8 
             mt-5 
             ml-5 
@@ -281,28 +284,28 @@
             transition
             duration-300
             hover:shadow-md;
-  }
+}
 
 @utility login-link {
-    @apply block
+  @apply block
             ml-5
             text-sm
             text-gray-600 
             hover:underline
             hover:text-azul-oscuro;
-  }
+}
 
 @utility social-icon {
-    @apply block 
+  @apply block 
             text-gray-700 
             text-3xl 
             mt-3 
             mb-5 
             ml-5;
-  }
+}
 
 @utility social-overlay {
-    @apply block 
+  @apply block 
             absolute 
             h-10 
             pl-2 
@@ -329,7 +332,7 @@
             group-hover:opacity-100 
             group-hover:transform 
             group-hover:translate-x-1;
-  }
+}
 
 @utility footer-box {
   font-family: "TrebuchetMS";
