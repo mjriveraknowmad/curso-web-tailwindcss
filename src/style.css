@@ -292,3 +292,42 @@
             hover:text-azul-oscuro;
   }
 
+@utility social-icon {
+    @apply block 
+            text-gray-700 
+            text-3xl 
+            mt-3 
+            mb-5 
+            ml-5;
+  }
+
+@utility social-overlay {
+    @apply block 
+            absolute 
+            h-10 
+            pl-2 
+            pr-2 
+            pt-1 
+            ml-16 
+            -mt-14 
+            font-sans 
+            font-bold 
+            text-gray-700 
+            tracking-wide 
+            shadow-md 
+            border-4 
+            border-white 
+            bg-gray-100 
+            cursor-pointer
+            transition 
+            duration-300
+            /* Lo siguiente es para luego hacer la animación con group-hover */
+            opacity-0 
+            transform 
+            -translate-x-16
+            /* Animación con group-hover */
+            group-hover:opacity-100 
+            group-hover:transform 
+            group-hover:translate-x-1;
+  }
+
