@@ -106,15 +106,54 @@
       <!--Fin Tarjetas-->
 
       <!--Inicio Contenido principal-->
-      <main class="md:container mt-4 flex flex-row mx-auto gap-10">
+      <main class="md:container mt-4 flex flex-col md:flex-row mx-auto gap-10">
         <!--Inicio Barra lateral-->
-        <aside id="lateral" class="order-2 flex-none w-72">
-          Contendrá formularios de búsqueda, login...
+        <aside
+          id="lateral"
+          class="order-2 flex-none min-h-full xs:w-full md:w-72 xs:m-0"
+        >
+          <h3 class="aside-header">BUSCAR</h3>
+          <div
+            id="search"
+            class="w-11/12 h-7 m-2.5 bg-white border border-gray-200 rounded shadow-inner"
+          >
+            <form>
+              <input
+                type="text"
+                class="w-10/12 h-6 border-none pl-1.5 rounded-md bg-transparent text-gray-500 transition duration-300 outline-none focus:outline-none"
+              />
+              <input
+                type="button"
+                value="L"
+                class="symbol h-6 cursor-pointer text-base bg-transparent border-none text-gray-500 pl-2 symbol"
+              />
+            </form>
+          </div>
+
+          <h3 class="aside-header">LOGIN</h3>
+          <div id="login" class="aside-box">
+            <form>
+              <label for="email" class="login-icon symbol">U</label>
+              <input type="email" id="email" class="login-input" />
+
+              <label for="password" class="login-icon text-xl ml-7 mt-6 symbol"
+                >w</label
+              >
+              <input type="password" id="password" class="login-input" />
+
+              <input type="submit" value="Entrar" class="login-button" />
+              <input type="reset" value="Limpiar" class="login-button ml-1" />
+              
+              <a href="#" class="login-link">Registrate aquí</a>
+              <a href="#" class="login-link">¿Has olvidado tu contraseña?</a>
+            </form>
+          </div>
+          
         </aside>
         <!--Fin Barra lateral-->
 
         <!--Inicio Articulos-->
-        <section class="order-1 flex-grow mr-10 xs:w-full xs:mr-0">
+        <section class="order-1 flex-grow mr-10 min-h-full xs:w-full md:w-72 xs:m-0">
           <h2 class="articles-header">Últimos artículos</h2>
 
           <article class="article-item">

@@ -206,3 +206,89 @@
 @utility article-description {
   @apply block mt-3 mb-3 text-base font-sans font-normal;
 }
+
+/* ASIDE */
+@utility aside-header {
+    font-family: "BebasNeue";
+    background: url("../img/pxgray.png"), white;
+    @apply block
+            h-11
+            leading-10
+            text-3xl
+            font-medium
+            tracking-widest
+            pl-3.5
+            pt-1
+            mb-3.5
+            border
+            shadow-header3D;
+  }
+
+@utility aside-box {
+    @apply w-10/12
+            h-60
+            mt-5
+            mb-7
+            mx-auto
+            pt-1
+            bg-white 
+            shadow-box
+            xs:w-60;
+  }
+
+ 
+@utility login-icon {
+    @apply text-center 
+            absolute 
+            ml-7 
+            mt-1 
+            h-8;
+  }
+
+@utility login-input {
+    @apply block 
+            mx-auto 
+            mt-5 
+            w-10/12 
+            h-8 border 
+            border-gray-300 
+            shadow-inner 
+            pl-7 
+            rounded-md 
+            text-gray-500 
+            transition 
+            duration-300 
+            outline-none 
+            focus:outline-none 
+          focus:text-gray-600;
+  }
+
+@utility login-button {
+    @apply w-24 
+            h-8 
+            mt-5 
+            ml-5 
+            mb-5 
+            text-center 
+            text-white 
+            text-base
+            font-light
+            border 
+            border-azul-oscuro 
+            bg-gradient-to-b from-azul-claro to-azul-oscuro
+            rounded-none
+            cursor-pointer
+            transition
+            duration-300
+            hover:shadow-md;
+  }
+
+@utility login-link {
+    @apply block
+            ml-5
+            text-sm
+            text-gray-600 
+            hover:underline
+            hover:text-azul-oscuro;
+  }
+
